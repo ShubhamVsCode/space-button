@@ -4,7 +4,7 @@ const backBotton = document.getElementsByClassName("ytp-replay-button")
 document.addEventListener("keydown", function (event) {
     if (event.code === "Space") {
         const videoScrollingDiv = document.getElementsByTagName("div")[4]
-        videoScrollingDiv?.style?.overflowY = "hidden"
+        if (videoScrollingDiv) videoScrollingDiv.style.overflowY = "hidden"
         if (playButton[0]?.style?.display == "none") {
             playButton[1]?.click();
         } else {
